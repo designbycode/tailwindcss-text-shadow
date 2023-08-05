@@ -1,6 +1,6 @@
 # Tailwind CSS Text Shadow Plugin
 
-![Static Badge](https://img.shields.io/badge/%40designbycode%2Ftailwindcss-text-shadow)
+[![npm version](https://badge.fury.io/js/@designbycode%2Ftailwindcss-text-shadow.svg)](https://badge.fury.io/js/@designbycode%2Ftailwindcss-text-shadow)
 ![npm](https://img.shields.io/npm/dt/%40designbycode/tailwindcss-text-shadow)
 ![NPM](https://img.shields.io/npm/l/%40designbycode%2Ftailwindcss-text-shadow)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/%40designbycode%2Ftailwindcss-text-shadow)
@@ -14,6 +14,25 @@ classes or define your own text shadow variations based on predefined steps and 
 
 ![TextShadow Plugin](screenshot.png)
 
+* [Tailwind CSS Text Shadow Plugin](#tailwind-css-text-shadow-plugin)
+    * [Installation](#installation)
+        * [Using pnpm](#using-pnpm)
+        * [Using npm](#using-npm)
+        * [Using yarn](#using-yarn)
+        * [Setup](#setup)
+        * [Default configuration styles](#default-configuration-styles)
+    * [Use](#use)
+        * [Apply Text Shadows](#apply-text-shadows)
+        * [Text shadow blur modifier](#text-shadow-blur-modifier)
+        * [Text shadow x and y modifiers](#text-shadow-x-and-y-modifiers)
+        * [Text shadow color modifier](#text-shadow-color-modifier)
+        * [Text shadow color opacity](#text-shadow-color-opacity)
+    * [Customization](#customization)
+        * [Example](#example)
+    * [License](#license)
+    * [Author](#author)
+    * [Acknowledgments](#acknowledgments)
+
 ## Installation
 
 To use this plugin, you need to have Tailwind CSS installed in your project. If you haven't installed Tailwind CSS yet, follow these steps:
@@ -21,7 +40,7 @@ To use this plugin, you need to have Tailwind CSS installed in your project. If 
 #### Using pnpm
 
 ```bash
-npm add @designbycode/tailwindcss-text-shadow
+pnpm add @designbycode/tailwindcss-text-shadow
 ```
 
 #### Using npm
@@ -38,17 +57,34 @@ yarn add @designbycode/tailwindcss-text-shadow
 
 ### Setup
 
-Add the Plugin to your Tailwind CSS Config
-In your tailwind.config.js file, add the plugin to the plugins array:
+1. Add the Plugin to your Tailwind CSS Config
+   In your tailwind.config.js file, add the plugin to the plugins array:
 
 ```javascript
 module.exports = {
-    // ...other configurations
-    plugins: [
-        // ...other plugins
-        require("@designbycode/tailwindcss-text-shadow"),
-    ],
+  // ...other configurations
+  plugins: [
+    // ...other plugins
+    require("@designbycode/tailwindcss-text-shadow"),
+  ],
 };
+```
+
+### Default configuration styles
+
+2. If the default styles do not suit your preferences, you can effortlessly customize them using the following configuration options
+
+```javascript
+module.exports = {
+  // ...other configurations
+  require("@designbycode/tailwindcss-text-shadow"
+)
+({
+  shadowColor: "rgba(0, 0, 0, 0.5)",
+  shadowBlur: "3px",
+  shadowOffsetX: "2px",
+  shadowOffsetY: "2px",
+})
 ```
 
 ## Use
@@ -59,7 +95,7 @@ Once the plugin is added to your Tailwind CSS configuration, you can use the pro
 
 ```html
 <h1 class="text-4xl text-shadow ">
-    Hello, Tailwind CSS!
+  Hello, Tailwind CSS!
 </h1>
 ```
 
@@ -69,7 +105,7 @@ To make the spread or blur bigger add the ```.text-shadow-blur-{value}```
 
 ```html
 <h1 class="text-4xl text-shadow text-shadow-blur-2 ">
-    Hello, Tailwind CSS!
+  Hello, Tailwind CSS!
 </h1>
 ```
 
@@ -79,7 +115,7 @@ The shadow can be moved on the xy axis using ```.text-shadow-x-{value}``` and ``
 
 ```html
 <h1 class="text-4xl text-shadow text-shadow-x-md text-shadow-y-lg text-shadow-blur-2 text-shadow-red">
-    Hello, Tailwind CSS!
+  Hello, Tailwind CSS!
 </h1>
 ```
 
@@ -87,7 +123,7 @@ The shadow can be moved on the xy axis using ```.text-shadow-x-{value}``` and ``
 
 ```html
 <h1 class="text-4xl text-shadow text-shadow-x-md text-shadow-y-lg text-shadow-blur-2 text-shadow-red-500">
-    Hello, Tailwind CSS!
+  Hello, Tailwind CSS!
 </h1>
 ```
 
@@ -101,19 +137,19 @@ To change the opacity of the text-shadow-color use the following method
 
 ```html
 <h1 class="text-shadow text-shadow-red-500/10">
-    Hello, Tailwind CSS!
+  Hello, Tailwind CSS!
 </h1>
 
 <!-- with  arbitrary values -->
 
 <h1 class="text-shadow text-shadow-red-[rgb(0,0,0,0.5)]">
-    Hello, Tailwind CSS!
+  Hello, Tailwind CSS!
 </h1>
 
 <!-- or arbitrary with / -->
 
 <h1 class="text-shadow text-shadow-red-[gray]/20">
-    Hello, Tailwind CSS!
+  Hello, Tailwind CSS!
 </h1>
 ```
 
@@ -127,19 +163,19 @@ shadow.
 ```javascript
 // tailwind.config.js
 module.exports = {
-    theme: {
-        textShadowSteps: {
-            sm: "1px",
-            md: "2px",
-            lg: "3px",
-            xl: "4px",
-            0: "0",
-            1: "1px",
-            2: "2px",
-            3: "3px",
-            4: "4px",
-        },
+  theme: {
+    textShadowSteps: {
+      sm: "1px",
+      md: "2px",
+      lg: "3px",
+      xl: "4px",
+      0: "0",
+      1: "1px",
+      2: "2px",
+      3: "3px",
+      4: "4px",
     },
+  },
 };
 ```
 
@@ -147,7 +183,11 @@ In this example, we have customized the textShadowSteps object with only four st
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the [MIT](LICENCE) License - see the [LICENSE](LICENCE) file for details.
+
+## Author
+
+<div style="display:flex;align-items:center"><div><img style="box-shadow:3px 3px 3px rgba(0,0,0,75);border-radius:1rem;border:solid 2px rgba(255,225,225,.25)" src="https://github.com/designbycode.png?size=120" alt="Claude Myburgh"></div><div style="margin-left:1rem"><h2 style="margin-top:0">Claude Myburgh</h2><ul style="padding-left:0;margin-top:-.63rem;list-style:none"><li>Github:<a href="https://github.com/designbycode">@designbycode</a></li><li>Npm:<a href="https://www.npmjs.com/~designbycode_">@designbycode_</a></li></ul></div></div>
 
 ## Acknowledgments
 
