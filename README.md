@@ -22,6 +22,7 @@ classes or define your own text shadow variations based on predefined steps and 
     * [Setup](#setup)
     * [Default configuration styles](#default-configuration-styles)
   * [Use](#use)
+    * [Video Tutorial](#video-tutorial)
     * [Apply Text Shadows](#apply-text-shadows)
     * [Text shadow blur modifier](#text-shadow-blur-modifier)
     * [Text shadow x and y modifiers](#text-shadow-x-and-y-modifiers)
@@ -91,7 +92,8 @@ module.exports = {
 
 ### Video Tutorial
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Xb0wAMAGAHE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+See plugin in action in video below. 👇
+[![Now in Android: 55](thumb.png)](https://youtu.be/Xb0wAMAGAHE)
 
 ### Apply Text Shadows
 
