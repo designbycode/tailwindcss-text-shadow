@@ -4,8 +4,9 @@
 ![npm](https://img.shields.io/npm/dt/%40designbycode/tailwindcss-text-shadow)
 ![NPM](https://img.shields.io/npm/l/%40designbycode%2Ftailwindcss-text-shadow)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/%40designbycode%2Ftailwindcss-text-shadow)
-![GitHub Repo stars](https://img.shields.io/github/stars/designbycode/tailwindcss-text-shadow)
+![ts](https://badgen.net/badge/Built%20With/TypeScript/blue)
 [![GitHub stars](https://img.shields.io/github/stars/DesignByCode/tailwindcss-text-shadow?style=social)](https://github.com/DesignByCode/tailwindcss-text-shadow/stargazers)
+[![HitCount](https://hits.dwyl.com/designbycode/tailwindcss-text-shadow.svg?style=flat)](http://hits.dwyl.com/designbycode/tailwindcss-text-shadow)
 
 [![NPM](https://nodei.co/npm/@designbycode/tailwindcss-text-shadow.png)](https://nodei.co/npm/@designbycode/tailwindcss-text-shadow/)
 
@@ -194,7 +195,11 @@ This project is licensed under the [MIT](LICENCE) License - see the [LICENSE](LI
 
 ## Author
 
-<div style="display:flex;align-items:center"><div><img style="box-shadow:3px 3px 3px rgba(0,0,0,75);border-radius:1rem;border:solid 2px rgba(255,225,225,.25)" src="https://github.com/designbycode.png?size=120" alt="Claude Myburgh"></div><div style="margin-left:1rem"><h2 style="margin-top:0">Claude Myburgh</h2><ul style="padding-left:0;margin-top:-.63rem;list-style:none"><li>Github:<a href="https://github.com/designbycode">@designbycode</a></li><li>Npm:<a href="https://www.npmjs.com/~designbycode_">@designbycode_</a></li></ul></div></div>
+<div>
+<img  align="left" style="box-shadow:3px 3px 3px rgba(0,0,0,75);border-radius:1rem;border:solid 2px rgba(255,225,225,.25)" src="https://github.com/designbycode.png?size=130" alt="Claude Myburgh">
+</div>
+<h2 style="margin-top:0">Claude Myburgh</h2><ul style="padding-left:0;margin-top:-.63rem;list-style:none"><li>Github:<a href="https://github.com/designbycode"> @designbycode</a></li><li>Npm:<a href="https://www.npmjs.
+com/~designbycode_"> @designbycode_</a></li></ul>
 
 ## Acknowledgments
 
