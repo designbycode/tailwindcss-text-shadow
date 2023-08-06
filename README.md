@@ -93,7 +93,8 @@ module.exports = {
 ### Video Tutorial
 
 See plugin in action in video below. 👇
-[![Now in Android: 55](thumb.png)](https://youtu.be/Xb0wAMAGAHE)
+
+[![Now in Android: 55](thumb-play.png)](https://youtu.be/Xb0wAMAGAHE)
 
 ### Apply Text Shadows
 
