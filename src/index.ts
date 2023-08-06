@@ -17,10 +17,10 @@ module.exports = plugin.withOptions(
     return function ({ addBase, addComponents, matchUtilities, theme }): void {
       addBase({
         ":root": {
-          "--ts-text-shadow-color": options.shadowColor || "black",
+          "--ts-text-shadow-color": options.shadowColor || "rgba(0, 0,0,0.45)",
           "--ts-text-shadow-x": options.shadowOffsetX || "1px",
           "--ts-text-shadow-y": options.shadowOffsetY || "1px",
-          "--ts-text-shadow-blur": options.shadowBlur || "1px",
+          "--ts-text-shadow-blur": options.shadowBlur || "2px",
         },
       })
       addComponents({

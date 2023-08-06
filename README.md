@@ -15,23 +15,23 @@ classes or define your own text shadow variations based on predefined steps and 
 ![TextShadow Plugin](screenshot.png)
 
 * [Tailwind CSS Text Shadow Plugin](#tailwind-css-text-shadow-plugin)
-    * [Installation](#installation)
-        * [Using pnpm](#using-pnpm)
-        * [Using npm](#using-npm)
-        * [Using yarn](#using-yarn)
-        * [Setup](#setup)
-        * [Default configuration styles](#default-configuration-styles)
-    * [Use](#use)
-        * [Apply Text Shadows](#apply-text-shadows)
-        * [Text shadow blur modifier](#text-shadow-blur-modifier)
-        * [Text shadow x and y modifiers](#text-shadow-x-and-y-modifiers)
-        * [Text shadow color modifier](#text-shadow-color-modifier)
-        * [Text shadow color opacity](#text-shadow-color-opacity)
-    * [Customization](#customization)
-        * [Example](#example)
-    * [License](#license)
-    * [Author](#author)
-    * [Acknowledgments](#acknowledgments)
+  * [Installation](#installation)
+    * [Using pnpm](#using-pnpm)
+    * [Using npm](#using-npm)
+    * [Using yarn](#using-yarn)
+    * [Setup](#setup)
+    * [Default configuration styles](#default-configuration-styles)
+  * [Use](#use)
+    * [Apply Text Shadows](#apply-text-shadows)
+    * [Text shadow blur modifier](#text-shadow-blur-modifier)
+    * [Text shadow x and y modifiers](#text-shadow-x-and-y-modifiers)
+    * [Text shadow color modifier](#text-shadow-color-modifier)
+    * [Text shadow color opacity](#text-shadow-color-opacity)
+  * [Customization](#customization)
+    * [Example](#example)
+  * [License](#license)
+  * [Author](#author)
+  * [Acknowledgments](#acknowledgments)
 
 ## Installation
 
@@ -88,6 +88,10 @@ module.exports = {
 ```
 
 ## Use
+
+### Video Tutorial
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xb0wAMAGAHE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### Apply Text Shadows
 

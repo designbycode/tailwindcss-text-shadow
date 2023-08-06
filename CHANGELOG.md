@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.1.1
+
+### Added or Changed
+
+- Change default shadow color to rgb
+- Add video to Readme
+
 ## v1.1.0
 
 ### Added or Changed
