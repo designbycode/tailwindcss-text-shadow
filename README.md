@@ -206,6 +206,7 @@ shadow.
 // tailwind.config.js
 module.exports = {
     theme: {
+        experimental: false,
         textShadowSteps: {
             sm: "1px",
             md: "2px",
