@@ -13,7 +13,7 @@ require("esbuild")
     format: "cjs",
     outdir: "dist",
     tsconfig: "./tsconfig.json", // Specify the path to your tsconfig.json
-    // outfile: 'build/index.js',
+    // outfile: 'build/index.ts',
   })
   .catch(() => process.exit(1))
 

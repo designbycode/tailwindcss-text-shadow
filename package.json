@@ -26,13 +26,13 @@
     "access": "public"
   },
   "scripts": {
-    "prebuild": "npm run clean",
+    "prebuild": "pnpm clean",
     "build": "node ./esbuild.config.js",
     "clean": "rd /s /q esm dist lib build .cache>nul 2>&1|echo.>nul",
     "dev": "node ./esbuild.config.js",
-    "precommit": "npm run test && lint-staged",
+    "precommit": "pnpm test && lint-staged",
     "test": "",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "pnpm test -- --watch"
   },
   "lint-staged": {
     "src/**/*.ts": [

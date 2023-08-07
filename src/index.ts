@@ -7,7 +7,7 @@ interface StepProps {
 }
 
 interface OptionsProps {
-  enableLongShadow?: boolean
+  experimental?: boolean
   shadowColor?: string
   shadowOffsetX?: string
   shadowOffsetY?: string
@@ -40,8 +40,8 @@ module.exports = plugin.withOptions(
         let directionY = "var(--ts-text-shadow-y)"
 
         for (let x = 0; x < steps; x++) {
-          const xValue = `calc(${directionX} ${directionX ? "+" : "-"}  ${x}px)`
-          const yValue = `calc(${directionY} ${directionX ? "+" : "-"} ${x}px)`
+          const xValue = `calc(${directionX} + ${x}px)`
+          const yValue = `calc(${directionY} + ${x}px)`
           classes.push(`${xValue} ${yValue} var(--ts-text-shadow-blur) var(--ts-text-shadow-color)`)
         }
         return classes.toString()
@@ -84,7 +84,7 @@ module.exports = plugin.withOptions(
         }
       )
 
-      if (!options.enableLongShadow) return
+      if (!options.experimental) return
 
       addComponents({
         ".text-shadow-long": {
@@ -108,6 +108,7 @@ module.exports = plugin.withOptions(
   function (options: OptionsProps) {
     return {
       theme: {
+        experimental: false,
         textShadowLong: {
           sm: 4,
           md: 8,
@@ -132,6 +133,7 @@ module.exports = plugin.withOptions(
           9: "9px",
           10: "10px",
         },
+        ...options,
       },
     }
   }
