@@ -9,7 +9,7 @@ require("esbuild")
     minify: true,
     splitting: false,
     platform: "node",
-    watch: false,
+    watch: true,
     format: "cjs",
     outdir: "dist",
     tsconfig: "./tsconfig.json", // Specify the path to your tsconfig.json
