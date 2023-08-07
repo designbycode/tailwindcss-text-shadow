@@ -21,25 +21,26 @@ classes or define your own text shadow variations based on predefined steps and 
 
 ## 📇 Table of Contents
 
-* [Tailwind CSS Text Shadow Plugin](#tailwind-css-text-shadow-plugin)
-    * [Installation](#installation)
-        * [Using pnpm](#using-pnpm)
-        * [Using npm](#using-npm)
-        * [Using yarn](#using-yarn)
-        * [Setup](#setup)
-        * [Default configuration styles](#default-configuration-styles)
-    * [Use](#use)
-        * [Video Tutorial](#video-tutorial)
-        * [Apply Text Shadows](#apply-text-shadows)
-        * [Text shadow blur modifier](#text-shadow-blur-modifier)
-        * [Text shadow x and y modifiers](#text-shadow-x-and-y-modifiers)
-        * [Text shadow color modifier](#text-shadow-color-modifier)
-        * [Text shadow color opacity](#text-shadow-color-opacity)
-    * [Customization](#customization)
-        * [Example](#example)
-    * [License](#license)
-    * [Author](#author)
-    * [Acknowledgments](#acknowledgments)
+* [Installation](#installation)
+    * [Using pnpm](#using-pnpm)
+    * [Using npm](#using-npm)
+    * [Using yarn](#using-yarn)
+    * [Setup](#setup)
+    * [Default configuration styles](#default-configuration-styles)
+* [Use](#use)
+    * [Video Tutorial](#video-tutorial)
+    * [Apply Text Shadows](#apply-text-shadows)
+    * [Text shadow blur modifier](#text-shadow-blur-modifier)
+    * [Text shadow x and y modifiers](#text-shadow-x-and-y-modifiers)
+    * [Text shadow color modifier](#text-shadow-color-modifier)
+    * [Text shadow color opacity](#text-shadow-color-opacity)
+    * [Long shadow](#long-text-shadow)
+* [Customization](#customization)
+    * [Example](#example)
+* [Contributing](#contributing)
+* [License](#license)
+* [Author](#author)
+* [Acknowledgments](#acknowledgments)
 
 ## Installation
 
@@ -167,6 +168,33 @@ To change the opacity of the text-shadow-color use the following method
 </h1>
 ```
 
+> **Warning**
+> New experimental long shadow feature
+
+```javascript
+module.exports = {
+    // ...other configurations
+    require("@designbycode/tailwindcss-text-shadow"
+)
+({
+    experimental: true, // 👈
+})
+```
+
+### Long text shadow
+
+The long shadow is a new experimental feature that I add. It creates shadow that stacks to any amount. The classes is ```.text-shadow-long``` or ```.text-shadow-long-{size}``` or  ```.text-shadow-long-[steps]```
+
+```html
+<h1 class="text-shadow-long text-shadow-blur-2 text-shadow-red">
+    Hello, Tailwind CSS!
+</h1>
+<!-- or -->
+<h1 class="text-shadow-long-[1000]">
+    Hello, Tailwind CSS!
+</h1>
+```
+
 ## Customization
 
 You can customize the available text shadow options by modifying the theme.textShadowSteps property in your tailwind.config.js file. The steps defined in this object will be used to generate utility classes for each aspect of the text
@@ -194,23 +222,6 @@ module.exports = {
 ```
 
 In this example, we have customized the textShadowSteps object with only four steps for sm, md, lg, and xl, and removed the rest. The plugin will generate utility classes accordingly.
-
-> **Warning**
-> New experimental long shadow feature
-
-```javascript
-module.exports = {
-    // ...other configurations
-    require("@designbycode/tailwindcss-text-shadow"
-)
-({
-    experimental: true, // 👈
-    shadowColor: "rgba(0, 0, 0, 0.5)",
-    shadowBlur: "3px",
-    shadowOffsetX: "2px",
-    shadowOffsetY: "2px",
-})
-```
 
 ## Contributing
 
