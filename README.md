@@ -1,4 +1,6 @@
+<a href="#installation" width="100%">
 <img src="banner.svg" alt="Title banner"/>
+</a>
 
 ## Tailwind CSS Text Shadow Plugin
 
