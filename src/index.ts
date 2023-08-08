@@ -1,6 +1,9 @@
+import { comment } from "postcss"
+import { version as packageVersion } from "../package.json"
+import generateShadows from "../utils/generateShadows.ts"
+
 const plugin = require("tailwindcss/plugin")
 const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette")
-const { default: toColorValue } = require("tailwindcss/lib/util/toColorValue.js")
 
 interface StepProps {
   [key: string]: string
@@ -16,7 +19,13 @@ interface OptionsProps {
 
 module.exports = plugin.withOptions(
   function (options: OptionsProps = {}) {
-    return function ({ addBase, addComponents, matchUtilities, matchComponents, theme }): void {
+    return function ({ addBase, addComponents, matchUtilities, matchComponents, theme }: any): void {
+      addBase([
+        comment({
+          text: `!  tailwindcss-text-shadow v${packageVersion} | MIT License | https://designbycode.co.za`,
+        }),
+      ])
+
       addBase({
         ":root": {
           "--ts-text-shadow-color": options.shadowColor || "rgba(0, 0,0,0.45)",
@@ -25,27 +34,6 @@ module.exports = plugin.withOptions(
           "--ts-text-shadow-blur": options.shadowBlur || "2px",
         },
       })
-
-      // function setShadows(steps: number = 1) {
-      //   let classes = []
-      //   for (let x = 0; x < steps; x++) {
-      //     classes.push(`calc(var(--ts-text-shadow-x) + ${x}px) calc(var(--ts-text-shadow-y) + ${x}px) var(--ts-text-shadow-blur) var(--ts-text-shadow-color)`)
-      //   }
-      //   return classes.toString()
-      // }
-
-      function setShadows(steps = 1) {
-        let classes = []
-        let directionX = "var(--ts-text-shadow-x)"
-        let directionY = "var(--ts-text-shadow-y)"
-
-        for (let x = 0; x < steps; x++) {
-          const xValue = `calc(${directionX} + ${x}px)`
-          const yValue = `calc(${directionY} + ${x}px)`
-          classes.push(`${xValue} ${yValue} var(--ts-text-shadow-blur) var(--ts-text-shadow-color)`)
-        }
-        return classes.toString()
-      }
 
       addComponents({
         ".text-shadow": {
@@ -71,6 +59,7 @@ module.exports = plugin.withOptions(
           supportsNegativeValues: true,
         }
       )
+
       matchUtilities(
         {
           "text-shadow": (value: StepProps) => ({
@@ -78,7 +67,6 @@ module.exports = plugin.withOptions(
           }),
         },
         {
-          respectPrefix: "dbc",
           values: flattenColorPalette(theme("colors")),
           type: "color",
         }
@@ -88,14 +76,14 @@ module.exports = plugin.withOptions(
 
       addComponents({
         ".text-shadow-long": {
-          textShadow: setShadows(6),
+          textShadow: generateShadows(6),
         },
       })
 
       matchComponents(
         {
           "text-shadow-long": (value: number) => ({
-            textShadow: setShadows(value),
+            textShadow: generateShadows(value),
           }),
         },
         {
@@ -105,7 +93,7 @@ module.exports = plugin.withOptions(
       )
     }
   },
-  function (options: OptionsProps) {
+  function () {
     return {
       theme: {
         experimental: false,
@@ -133,7 +121,6 @@ module.exports = plugin.withOptions(
           9: "9px",
           10: "10px",
         },
-        ...options,
       },
     }
   }

@@ -19,5 +19,6 @@ webpack.mix.js
 esbuild.config.js
 
 *.png
+*.svg
 README.md
 CHANGELOG.md

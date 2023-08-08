@@ -11,8 +11,10 @@
     "url": "https://github.com/DesignByCode/tailwindcss-text-shadow/issues"
   },
   "homepage": "https://github.com/DesignByCode/tailwindcss-text-shadow#readme",
-  "author": "Claude Myburgh <claude@designbycode.co.za>",
   "keywords": [
+    "front-end",
+    "frontend",
+    "css",
     "tailwindcss",
     "plugin",
     "tailwindcss-plugin",
@@ -20,19 +22,25 @@
     "text-shadow",
     "designbycode"
   ],
-  "type": "commonjs",
-  "main": "dist/index.js",
+  "type": "module",
+  "main": "./dist/index.umd.cjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs"
+    }
+  },
+  "module": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "prebuild": "pnpm clean",
-    "build": "node ./esbuild.config.js",
+    "build": "tsc && vite build",
     "clean": "rd /s /q esm dist lib build .cache>nul 2>&1|echo.>nul",
-    "dev": "node ./esbuild.config.js",
-    "precommit": "pnpm test && lint-staged",
-    "test": "",
-    "test:watch": "pnpm test -- --watch"
+    "dev": "pnpm build --watch"
   },
   "lint-staged": {
     "src/**/*.ts": [
@@ -40,22 +48,31 @@
       "git add"
     ]
   },
+  "authors": [
+    {
+      "name": "Claude Myburgh",
+      "email": "claude@designbycode.co.za",
+      "url": "https://designbycode.co.za"
+    }
+  ],
   "browserslist": [
     "> .5% or last 2 versions"
   ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/DesignByCode/tailwindcss-text-stroke/blob/main/LICENCE"
+    }
+  ],
   "devDependencies": {
-    "@types/jest": "^29.5.3",
-    "@typescript-eslint/eslint-plugin": "^5.62.0",
-    "@typescript-eslint/parser": "^5.62.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "prettier": "^2.8.8",
+    "husky": "^8.0.3",
+    "tailwindcss": "^3.3.3",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.27",
-    "esbuild": "^0.16.17",
-    "husky": "^8.0.3",
-    "prettier": "^2.8.8",
-    "tailwindcss": "^3.3.3",
-    "npm-dts": "^1.3.12",
-    "npm-run-all": "^4.1.5",
-    "ts-loader": "^9.4.4",
-    "typescript": "^4.9.5"
+    "terser": "^5.19.2",
+    "@types/node": "^20.4.8"
   }
 }
