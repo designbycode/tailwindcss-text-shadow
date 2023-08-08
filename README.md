@@ -102,7 +102,7 @@ module.exports = {
 
 See plugin in action in video below. 👇
 
-[![Now in Android: 55](thumb-play.png)](https://youtu.be/Xb0wAMAGAHE)
+[![Tailwindcss text-shadow tutorial](thumb-play.png)](https://youtu.be/Xb0wAMAGAHE)
 
 ### Apply Text Shadows
 
@@ -194,6 +194,8 @@ The long shadow is a new experimental feature that I add. It creates shadow that
     Hello, Tailwind CSS!
 </h1>
 ```
+
+[![Tailwindcss text-shadow tutorial](play-thumbnail-text-shadow.png)](https://youtu.be/quyJpz5dtcs)
 
 ## Customization
 
