@@ -32,15 +32,18 @@
   },
   "module": "./dist/index.js",
   "files": [
-    "dist"
+    "dist",
+    "utils"
   ],
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
     "build": "tsc && vite build",
-    "clean": "rd /s /q esm dist lib build .cache>nul 2>&1|echo.>nul",
-    "dev": "pnpm build --watch"
+    "clean": "rd /s /q dist .cache>nul 2>&1|echo.>nul",
+    "dev": "pnpm build --watch",
+    "postbuild": "tsc --emitDeclarationOnly",
+    "prepublishOnly": "pnpm build"
   },
   "lint-staged": {
     "src/**/*.ts": [
@@ -64,6 +67,9 @@
       "url": "https://github.com/DesignByCode/tailwindcss-text-stroke/blob/main/LICENCE"
     }
   ],
+  "peerDependencies": {
+    "tailwindcss": ">=3.0.0 || >=3.0.0-alpha.1"
+  },
   "devDependencies": {
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
