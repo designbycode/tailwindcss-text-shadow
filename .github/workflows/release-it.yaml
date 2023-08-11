@@ -8,7 +8,7 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v3
       - name: Install dependancies
-        run: npm cli
+        run: npm ci
       - name: Init Github User
         run: |
           git config --global user.email "claude@designbycode.co.za"
