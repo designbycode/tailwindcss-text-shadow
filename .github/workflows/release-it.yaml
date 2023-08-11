@@ -14,7 +14,7 @@ jobs:
       - name: Init Github User
         run: |
           git config --global user.email "claude@designbycode.co.za"
-          git config --global user.name "designbycode"
+          git config --global user.name "designbycode_"
       - name: Init NPM config
         run: npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
         env:
