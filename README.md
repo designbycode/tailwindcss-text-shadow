@@ -230,6 +230,13 @@ In this example, we have customized the textShadowSteps object with only four st
 
 Contributions to this plugin are welcome! If you encounter any issues, have feature requests, or want to improve the plugin, feel free to create a pull request or submit an issue on the GitHub repository.
 
+### Contributors
+<a href="https://github.com/DesignByCode/tailwindcss-text-shadow/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=DesignByCode/tailwindcss-text-shadow" />
+</a>
+
+
+
 ## License
 
 This project is licensed under the [MIT](LICENCE) License - see the [LICENSE](LICENCE) file for details.

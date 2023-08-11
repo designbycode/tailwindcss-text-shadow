@@ -14,7 +14,7 @@
     "tagName": "v${version}"
   },
   "npm" : {
-    "publish" : false
+    "publish" : true
   },
   "hooks": {
     "after:bump": "npx auto-changelog -p"

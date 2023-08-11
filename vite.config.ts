@@ -1,6 +1,6 @@
-// vite.config.js
 import { resolve } from "path"
 import { defineConfig } from "vite"
+import dts from "vite-plugin-dts"
 
 export default defineConfig({
   build: {
@@ -11,7 +11,9 @@ export default defineConfig({
       // the proper extensions will be added
       fileName: "index",
       formats: ["cjs", "umd"],
+
     },
     minify: "terser",
   },
+  plugins: [dts({ insertTypesEntry: true })],
 })

@@ -20,11 +20,14 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "declaration": true,
     "removeComments": true,
-    "sourceMap": true
+    "sourceMap": true,
+    /* declaration */
+    "declaration": true,
+    "declarationDir": "dist",
+//    "rootDir": "dist"
+
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src", "utils"],
+  "exclude": ["node_modules"]
 }
