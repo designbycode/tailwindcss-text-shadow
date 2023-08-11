@@ -74,11 +74,11 @@
   },
   "devDependencies": {
     "@release-it/bumper": "^5.1.0",
-    "@release-it/keep-a-changelog": "^4.0.0",
     "@release-it/conventional-changelog": "^7.0.0",
+    "@release-it/keep-a-changelog": "^4.0.0",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^9.0.4",
-    "@types/node": "^20.4.8",
+    "@types/node": "^20.4.10",
     "autoprefixer": "^10.4.14",
     "husky": "^8.0.3",
     "postcss": "^8.4.27",
@@ -87,8 +87,8 @@
     "semantic-release": "^21.0.7",
     "tailwindcss": "^3.3.3",
     "terser": "^5.19.2",
-    "typescript": "^5.0.2",
-    "vite": "^4.4.5",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.9",
     "vite-plugin-dts": "^3.5.1",
     "vitest": "^0.34.1"
   }
