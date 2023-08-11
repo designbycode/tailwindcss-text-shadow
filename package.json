@@ -1,6 +1,6 @@
 {
   "name": "@designbycode/tailwindcss-text-shadow",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Tailwindcss utilities for text stroke",
   "license": "MIT",
   "repository": {
@@ -43,7 +43,8 @@
     "clean": "rd /s /q dist .cache>nul 2>&1|echo.>nul",
     "dev": "pnpm build --watch",
     "postbuild": "tsc --emitDeclarationOnly",
-    "prepublishOnly": "pnpm build"
+    "prepublishOnly": "pnpm build",
+    "release": "release-it"
   },
   "lint-staged": {
     "src/**/*.ts": [
@@ -79,6 +80,12 @@
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.27",
     "terser": "^5.19.2",
-    "@types/node": "^20.4.8"
+    "@types/node": "^20.4.8",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.0.4",
+    "semantic-release": "^21.0.7",
+    "release-it": "^16.1.4",
+    "@release-it/bumper": "^5.1.0",
+    "@release-it/keep-a-changelog": "^4.0.0"
   }
 }
