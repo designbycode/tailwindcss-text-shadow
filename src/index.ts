@@ -1,7 +1,7 @@
 import { comment } from "postcss"
-import { version as packageVersion } from "../package.json"
-import generateShadows from "../utils/generateShadows.ts"
+import generateShadows from "./generateShadows"
 
+const version = require("../package.json")
 const plugin = require("tailwindcss/plugin")
 const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette")
 
@@ -22,7 +22,7 @@ module.exports = plugin.withOptions(
     return function ({ addBase, addComponents, matchUtilities, matchComponents, theme }: any): void {
       addBase([
         comment({
-          text: `!  tailwindcss-text-shadow v${packageVersion} | MIT License | https://designbycode.co.za`,
+          text: `!  tailwindcss-text-shadow v${version} | MIT License | https://designbycode.co.za`,
         }),
       ])
 

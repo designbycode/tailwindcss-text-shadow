@@ -10,7 +10,7 @@
     ],
     "skipLibCheck": true,
     /* Bundler mode */
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -23,11 +23,12 @@
     "removeComments": true,
     "sourceMap": true,
     /* declaration */
-    "declaration": true,
-    "declarationDir": "dist",
-//    "rootDir": "dist"
+//    "outDir": "./dist",
+//    "declaration": true,
+//    "rootDir": "./src",
+//    "declarationMap": true
 
   },
-  "include": ["src", "utils"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }
