@@ -6,13 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
       - uses: pnpm/action-setup@v2
         with:
           version: 7
-      - run: npm ci
+      - run: pnpm install --frozen-lockfile
       - run: pnpm test
 
   publish-npm:
@@ -23,7 +20,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          registry-url: https://registry.npmjs.org/
+          registry-url: https://registry.npmjs.org/@designbycode/tailwindcss-text-shadow
       - run: npm ci
       - run: npm publish
         env:
