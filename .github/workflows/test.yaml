@@ -27,7 +27,7 @@ jobs:
       - name: 'Install Deps'
         run: pnpm install --frozen-lockfile
       - name: 'Test'
-        run: npx vitest
+        run: pnpm test
       #      - name: 'Test coverage'
       #        run: npx vitest --coverage
       - name: 'Report Coverage'

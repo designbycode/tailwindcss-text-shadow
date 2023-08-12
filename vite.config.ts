@@ -3,6 +3,11 @@ import { defineConfig } from "vitest/config"
 import dts from "vite-plugin-dts"
 
 export default defineConfig({
+  test: {
+    coverage: {
+      reporter: ["json-summary", "text"]
+    }
+  },
   build: {
     lib: {
       // Could also be a dictionary or array of multiple entry points
