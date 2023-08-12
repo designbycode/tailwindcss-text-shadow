@@ -1,4 +1,4 @@
-name: Release-It
+name: Release to npm
 on: workflow_dispatch
 
 jobs:
@@ -11,17 +11,3 @@ jobs:
           version: 7
       - run: pnpm install --frozen-lockfile
       - run: pnpm test
-
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org/@designbycode/tailwindcss-text-shadow
-      - run: npm ci
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
