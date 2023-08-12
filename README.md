@@ -8,6 +8,7 @@
 ![npm](https://img.shields.io/npm/dt/%40designbycode/tailwindcss-text-shadow)
 ![NPM](https://img.shields.io/npm/l/%40designbycode%2Ftailwindcss-text-shadow)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/%40designbycode%2Ftailwindcss-text-shadow)
+[![Test](https://github.com/DesignByCode/tailwindcss-text-shadow/actions/workflows/test.yaml/badge.svg)](https://github.com/DesignByCode/tailwindcss-text-shadow/actions/workflows/test.yaml)
 ![ts](https://badgen.net/badge/Built%20With/TypeScript/blue)
 [![GitHub stars](https://img.shields.io/github/stars/DesignByCode/tailwindcss-text-shadow?style=social)](https://github.com/DesignByCode/tailwindcss-text-shadow/stargazers)
 [![HitCount](https://hits.dwyl.com/designbycode/tailwindcss-text-shadow.svg?style=flat)](http://hits.dwyl.com/designbycode/tailwindcss-text-shadow)
