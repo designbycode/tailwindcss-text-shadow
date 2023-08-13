@@ -15,6 +15,7 @@ jobs:
           version: '6.x'
           lockfile: 'pnpm-lock.yaml'
       - run: pnpm install
+      - run: npm ci --no-package-lock
       - run: pnpm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
