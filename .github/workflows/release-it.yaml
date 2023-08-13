@@ -13,6 +13,7 @@ jobs:
       - uses: pnpm/action-setup@v2
         with:
           version: '6.x'
+          lockfile: 'pnpm-lock.yaml'
       - run: pnpm install
       - run: pnpm publish
         env:
