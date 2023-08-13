@@ -1,0 +1,3 @@
+{"total": {"lines":{"total":7,"covered":7,"skipped":0,"pct":100},"statements":{"total":7,"covered":7,"skipped":0,"pct":100},"functions":{"total":1,"covered":1,"skipped":0,"pct":100},"branches":{"total":2,"covered":2,"skipped":0,"pct":100},"branchesTrue":{"total":0,"covered":0,"skipped":0,"pct":"Unknown"}}
+,"C:\\www\\npm-packages\\tailwindcss-text-shadow\\src\\generateShadows.ts": {"lines":{"total":7,"covered":7,"skipped":0,"pct":100},"functions":{"total":1,"covered":1,"skipped":0,"pct":100},"statements":{"total":7,"covered":7,"skipped":0,"pct":100},"branches":{"total":2,"covered":2,"skipped":0,"pct":100}}
+}
