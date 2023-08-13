@@ -2,12 +2,18 @@ name: Release to npm
 on: workflow_dispatch
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+          cache: 'pnpm'
       - uses: pnpm/action-setup@v2
         with:
-          version: 7
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm test
+          version: '6.x'
+      - run: pnpm install
+      - run: pnpm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
