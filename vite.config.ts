@@ -4,6 +4,7 @@ import dts from "vite-plugin-dts"
 
 export default defineConfig({
   test: {
+    // @ts-expect-error
     coverage: {
       reporter: ["json-summary", "text"]
     }
