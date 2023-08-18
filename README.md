@@ -1,8 +1,10 @@
 <a href="#installation" width="100%">
-<img src="banner.svg" alt="Title banner"/>
+<img src="img/banner.svg" alt="Title banner"/>
 </a>
 
 ## Tailwind CSS Text Shadow Plugin
+
+[![NPM](https://nodei.co/npm/@designbycode/tailwindcss-text-shadow.png?mini=true)](https://nodei.co/npm/@designbycode/tailwindcss-text-shadow/)
 
 [![npm version](https://badge.fury.io/js/@designbycode%2Ftailwindcss-text-shadow.svg)](https://badge.fury.io/js/@designbycode%2Ftailwindcss-text-shadow)
 ![npm](https://img.shields.io/npm/dt/%40designbycode/tailwindcss-text-shadow)
@@ -13,12 +15,10 @@
 [![GitHub stars](https://img.shields.io/github/stars/DesignByCode/tailwindcss-text-shadow?style=social)](https://github.com/DesignByCode/tailwindcss-text-shadow/stargazers)
 [![HitCount](https://hits.dwyl.com/designbycode/tailwindcss-text-shadow.svg?style=flat)](http://hits.dwyl.com/designbycode/tailwindcss-text-shadow)
 
-[![NPM](https://nodei.co/npm/@designbycode/tailwindcss-text-shadow.png)](https://nodei.co/npm/@designbycode/tailwindcss-text-shadow/)
-
 The Tailwind CSS **Text Shadow Plugin** extends the default set of utility classes in **Tailwind CSS** to provide easy text shadow customization for your web projects. With this plugin, you can apply custom text shadows using utility
 classes or define your own text shadow variations based on predefined steps and color palettes.
 
-![TextShadow Plugin](screenshot.png)
+![TextShadow Plugin](img/screenshot.png)
 
 ## 📇 Table of Contents
 
@@ -103,7 +103,7 @@ module.exports = {
 
 See plugin in action in video below. 👇
 
-[![Tailwindcss text-shadow tutorial](thumb-play.png)](https://youtu.be/Xb0wAMAGAHE)
+[![Tailwindcss text-shadow tutorial](img/thumb-play.png)](https://youtu.be/Xb0wAMAGAHE)
 
 ### Apply Text Shadows
 
@@ -196,7 +196,7 @@ The long shadow is a new experimental feature that I add. It creates shadow that
 </h1>
 ```
 
-[![Tailwindcss text-shadow tutorial](play-thumbnail-text-shadow.png)](https://youtu.be/quyJpz5dtcs)
+[![Tailwindcss text-shadow tutorial](img/play-thumbnail-text-shadow.png)](https://youtu.be/quyJpz5dtcs)
 
 ## Customization
 

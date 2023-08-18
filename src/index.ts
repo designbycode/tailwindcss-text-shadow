@@ -73,7 +73,6 @@ module.exports = plugin.withOptions(
         }
       )
 
-      if (!options.experimental) return
 
       addComponents({
         ".text-shadow-long": {
