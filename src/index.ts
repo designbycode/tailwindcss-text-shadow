@@ -73,17 +73,15 @@ module.exports = plugin.withOptions(
         }
       )
 
-      if (!options.experimental) return
-
       addComponents({
-        ".text-shadow-long": {
-          textShadow: generateShadows(6),
+        ".text-shadow-sm": {
+          textShadow: generateShadows(theme("textShadowSteps")[0]),
         },
       })
 
       matchComponents(
         {
-          "text-shadow-long": (value: number) => ({
+          "text-shadow": (value: number) => ({
             textShadow: generateShadows(value),
           }),
         },

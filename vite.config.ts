@@ -6,8 +6,8 @@ export default defineConfig({
   test: {
     // @ts-expect-error
     coverage: {
-      reporter: ["json-summary", "text"]
-    }
+      reporter: ["json-summary", "text"],
+    },
   },
   build: {
     lib: {
@@ -17,7 +17,6 @@ export default defineConfig({
       // the proper extensions will be added
       fileName: "index",
       formats: ["cjs", "umd"],
-
     },
     minify: "terser",
   },

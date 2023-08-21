@@ -1,9 +1,7 @@
-import {describe, it, expect} from "vitest";
-import generateShadows from "../src/generateShadows";
+import { describe, it, expect } from "vitest"
+import generateShadows from "../src/generateShadows"
 
-
-describe('# Generate shadow', () => {
-
+describe("# Generate shadow", () => {
   const singleLine = `calc(var(--ts-text-shadow-x) * 0) calc(var(--ts-text-shadow-y) * 0) var(--ts-text-shadow-blur) var(--ts-text-shadow-color)`
 
   const doubleLine = `calc(var(--ts-text-shadow-x) * 0) calc(var(--ts-text-shadow-y) * 0) var(--ts-text-shadow-blur) var(--ts-text-shadow-color),calc(var(--ts-text-shadow-x) * 1) calc(var(--ts-text-shadow-y) * 1) var(--ts-text-shadow-blur) var(--ts-text-shadow-color)`
@@ -12,14 +10,13 @@ describe('# Generate shadow', () => {
 
   it("should be 1 shadow line", () => {
     expect(generateShadows(1)).toEqual(singleLine)
-  });
+  })
 
   it("should be 2 shadow line", () => {
     expect(generateShadows(2)).toEqual(doubleLine)
-  });
+  })
 
   it("should be 10 shadow line", () => {
     expect(generateShadows(10)).toEqual(tenSteps)
-  });
-
+  })
 })
