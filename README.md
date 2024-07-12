@@ -164,9 +164,11 @@ module.exports = {
     require("@designbycode/tailwindcss-text-shadow"
 )
 ({
-    experimental: true, // 👈
+    experimental: true, // 👈 
 })
 ```
+
+> Note the latest version doesn't need experimental anymore 
 
 ### Long text shadow
 
@@ -191,6 +193,7 @@ shadow.
 // tailwind.config.js
 module.exports = {
     theme: {
+        prefix: 'text-shadow',
         textShadowSteps: {
             sm: "1px",
             md: "2px",
@@ -207,6 +210,23 @@ module.exports = {
 ```
 
 In this example, we have customized the textShadowSteps object with only four steps for sm, md, lg, and xl, and removed the rest. The plugin will generate utility classes accordingly.
+
+### Change class name prefix
+If you don't like to use class name `.text-shadow` or are getting conflicts in application you can change it to whatever you want like `.textShadow`, `ts` or whatever you want. Change it in theme settings.
+
+```typescript
+// tailwind.config.js
+module.exports = {
+    theme: {
+        prefix: 'ts',
+    },
+}
+```
+
+### Use 
+```html
+<div class="ts-lg ts-indigo-500"></div>
+```
 
 ## Contributing
 

@@ -16,10 +16,13 @@ interface OptionsProps {
   shadowOffsetX?: string
   shadowOffsetY?: string
   shadowBlur?: string
+  prefix?: string
 }
 
 module.exports = plugin.withOptions(
   function (options: OptionsProps = {}) {
+    const prefix = options.prefix || "text-shadow"
+
     return function ({ addBase, addComponents, matchUtilities, matchComponents, theme }: any): void {
       addBase([
         comment({
@@ -37,20 +40,20 @@ module.exports = plugin.withOptions(
       })
 
       addComponents({
-        ".text-shadow": {
+        [`.${prefix}`]: {
           textShadow: `var(--ts-text-shadow-x) var(--ts-text-shadow-y) var(--ts-text-shadow-blur) var(--ts-text-shadow-color)`,
         },
       })
 
       matchUtilities(
         {
-          "text-shadow-x": (value: StepProps) => ({
+          [`${prefix}-x`]: (value: StepProps) => ({
             "--ts-text-shadow-x": value,
           }),
-          "text-shadow-y": (value: StepProps) => ({
+          [`${prefix}-y`]: (value: StepProps) => ({
             "--ts-text-shadow-y": value,
           }),
-          "text-shadow-blur": (value: StepProps) => ({
+          [`${prefix}-blur`]: (value: StepProps) => ({
             "--ts-text-shadow-blur": value,
           }),
         },
@@ -63,7 +66,7 @@ module.exports = plugin.withOptions(
 
       matchUtilities(
         {
-          "text-shadow": (value: StepProps) => ({
+          [`${prefix}`]: (value: StepProps) => ({
             "--ts-text-shadow-color": value,
           }),
         },
@@ -74,14 +77,14 @@ module.exports = plugin.withOptions(
       )
 
       addComponents({
-        ".text-shadow-sm": {
+        [`.${prefix}-sm`]: {
           textShadow: generateShadows(theme("textShadowSteps")[0]),
         },
       })
 
       matchComponents(
         {
-          "text-shadow": (value: number) => ({
+          [`${prefix}`]: (value: number) => ({
             textShadow: generateShadows(value),
           }),
         },
