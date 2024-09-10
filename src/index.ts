@@ -1,4 +1,4 @@
-// @ts-ignore
+
 import { comment } from "postcss"
 import generateShadows from "./generateShadows"
 
