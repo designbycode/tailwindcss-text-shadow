@@ -2,8 +2,10 @@
 import { comment } from "postcss"
 import generateShadows from "./generateShadows"
 
-const version = require("../package.json")
-const plugin = require("tailwindcss/plugin")
+import {version} from "../package.json";
+
+import plugin from "tailwindcss/plugin";
+
 const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette")
 
 interface StepProps {
