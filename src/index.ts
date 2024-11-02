@@ -1,10 +1,9 @@
-
 import { comment } from "postcss"
 import generateShadows from "./generateShadows"
 
-import {version} from "../package.json";
+import { version } from "../package.json"
 
-import plugin from "tailwindcss/plugin";
+import plugin from "tailwindcss/plugin"
 
 const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette")
 
